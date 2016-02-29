@@ -85,4 +85,7 @@
  */
 - (void) sendAllReportsWithCompletion:(KSCrashReportFilterCompletion) onCompletion;
 
+- (void) sendReportsWithSink:(id<KSCrashReportFilter>)sink
+                  completion:(KSCrashReportFilterCompletion)completion;
+
 @end
