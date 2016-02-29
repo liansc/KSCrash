@@ -45,15 +45,15 @@ typedef enum
     KSCrashTypeUserReported       = 0x20,
 } KSCrashType;
 
-#define KSCrashTypeAll              \
-(                                   \
-    KSCrashTypeMachException      | \
-    KSCrashTypeSignal             | \
-    KSCrashTypeCPPException       | \
-    KSCrashTypeNSException        | \
-    KSCrashTypeMainThreadDeadlock | \
-    KSCrashTypeUserReported         \
-)
+#define KSCrashTypeAll              KSCrashTypeUserReported
+//(                                   \
+//    KSCrashTypeMachException      | \
+//    KSCrashTypeSignal             | \
+//    KSCrashTypeCPPException       | \
+//    KSCrashTypeNSException        | \
+//    KSCrashTypeMainThreadDeadlock | \
+//    KSCrashTypeUserReported         \
+//)
 
 #define KSCrashTypeExperimental     \
 (                                   \
