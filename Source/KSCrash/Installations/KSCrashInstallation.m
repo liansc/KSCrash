@@ -357,6 +357,13 @@ void kscinst_i_crashCallback(const KSCrashReportWriter* writer)
     [handler sendAllReportsWithCompletion:onCompletion];
 }
 
+- (void) sendReportsWithSink:(id<KSCrashReportFilter>)sink
+{
+    KSCrash* crashReporter = [KSCrash sharedInstance];
+    crashReporter.sink = sink;
+    [crashReporter sendAllReportsWithCompletion:nil];
+}
+
 - (id<KSCrashReportFilter>) sink
 {
     return nil;
